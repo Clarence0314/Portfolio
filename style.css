@@ -23,8 +23,8 @@ header {
 
 .background-section {
     width: 100%;
-    height: 150px;
-    display: flex;
+    height: 125px;
+    display: flex;  
     align-items: center;
     justify-content: center;
     color: #355275;
