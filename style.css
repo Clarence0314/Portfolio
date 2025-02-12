@@ -76,6 +76,26 @@ header {
 section {
     margin-bottom: 30px;
     scroll-margin-top: 60px;
+    text-align: center;
+}
+
+/* Fix Overlapping Text */
+h1, h2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
 
 /* Responsive Grid for Skills */
@@ -103,17 +123,4 @@ section {
 a, button {
     transition: color 0.3s ease-in-out;
     touch-action: manipulation;
-}
-
-/* Optimize Typography */
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1rem;
 }
