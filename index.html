@@ -12,9 +12,9 @@
     <header>
         <h1 class="profile-name">Clarence Tiang Wei Rong</h1>
         <p class="title">MMU | Bachelor of Computer Science | Majoring in Data Science</p>
-        <p>I am a data science graduate with hands-on experience in AI models and a strong passion for cloud computing. I continuously expand my knowledge through self-learning, exploring cloud technologies, and gaining practical experience via online tutorials and hands-on projects.</p>
+        <p>I am a data science graduate passionate about cloud computing and DevOps automation. I have hands-on experience with container orchestration, CI/CD pipelines, and AI models, and continuously pursue growth through self-learning and professional certifications.</p>
         <br>
-        <p>My professional goal is to become a skilled engineer, whether in cloud computing or data science. To enhance my expertise and market value, I am committed to continuous learning and actively working towards obtaining relevant industry certifications.</p>
+        <p>My career goal is to become a skilled engineer specializing in cloud infrastructure and data-driven solutions. I actively explore cloud technologies, container management, and AI systems to strengthen both practical and theoretical understanding.</p>
         <div class="contact-info">
             <span class="contact-item">📧 ctwr0314@gmail.com</span>
             <span class="contact-item">📱 +6016 8758811</span>
@@ -35,6 +35,7 @@
             <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#skills" class="nav-link">My Skills</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
             <li><a href="Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
         </ul>
     </nav>
@@ -42,17 +43,32 @@
     <main>
         <section id="experience">
             <h2 class="section-title">Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="company-name">Bybit</span>
+                    <span class="date">July 2025 – October 2025</span>
+                </div>
+                <p class="position">DevOps Intern</p>
+                <ul>
+                    <li>Deployed a static website on Kubernetes, configuring deployment and services.</li>
+                    <li>Monitored system resources using Prometheus, Grafana, and Monit.</li>
+                    <li>Assisted in CI/CD pipeline setup using GitLab, Jenkins, and Docker for testnet deployment.</li>
+                    <li>Optimized Docker images using multi-stage builds and caching to reduce image size and build time.</li>
+                    <li>Applied concepts in Kubernetes, Docker, GitLab CI/CD, Kafka, and monitoring tools to strengthen automation expertise.</li>
+                </ul>
+            </div>
+
             <div class="experience-item">
                 <div class="experience-header">
                     <span class="company-name">Global Development Technology Sdn Bhd</span>
                     <span class="date">July 2024 – October 2024</span>
-                    
                 </div>
                 <p class="position">Service Engineer Intern</p>
                 <ul>
-                    <li>Performed power cycling, troubleshooting, and replacement of faulty components</li>
-                    <li>Assisted with basic cabling work and equipment installation</li>
-                    <li>Conducted daily data center patrols and participated in on-call rotations</li>
+                    <li>Performed power cycling, troubleshooting, and replacement of faulty components.</li>
+                    <li>Assisted with cabling work, equipment movement, and installation during inspections.</li>
+                    <li>Conducted daily data center patrols, documented issues, and participated in on-call rotations.</li>
                 </ul>
             </div>
 
@@ -61,11 +77,11 @@
                     <span class="company-name">Oriental Realty</span>
                     <span class="date">November 2022 – June 2024</span>
                 </div>
-                <p class="position">Iproperty Assistant (Part Time)</p>
+                <p class="position">IProperty Assistant (Part Time)</p>
                 <ul>
-                    <li>Managed property listings and client communications</li>
-                    <li>Created and managed online property advertisements</li>
-                    <li>Provided suitable property options based on client needs</li>
+                    <li>Managed property listings and client communications.</li>
+                    <li>Created and managed online advertisements to increase visibility.</li>
+                    <li>Provided clients with suitable property options based on preferences.</li>
                 </ul>
             </div>
 
@@ -76,9 +92,9 @@
                 </div>
                 <p class="position">IT Assistant Intern</p>
                 <ul>
-                    <li>Resolved hardware, software and network issues for employees</li>
-                    <li>Managed hardware/software inventory and maintained network infrastructure</li>
-                    <li>Handled data migration and system upgrade tasks</li>
+                    <li>Resolved hardware, software, and network issues for employees.</li>
+                    <li>Maintained network infrastructure and managed inventory.</li>
+                    <li>Handled data migration and system upgrade tasks.</li>
                 </ul>
             </div>
         </section>
@@ -105,39 +121,18 @@
 
         <section id="projects">
             <h2 class="section-title">Notable Projects</h2>
+
             <div class="project-item">
                 <div class="project-header">
                     <span class="project-name">Realistic Content Aware Color Style Transfer</span>
                     <span class="date">Degree Final Year Project</span>
                 </div>
-                <p class="project-description">
-                    <b>Objective:</b> Developed a system to transfer color styles between images while preserving content, incorporating user preferences for personalized results.
-                </p>
-                <p class="project-description">
-                    <b>Model:</b> Leveraged the VGG19 network to extract multi-level feature representations from both the source and reference images. Applied Adaptive Instance Normalization (AdaIN) to align feature statistics, facilitating effective style transfer and domain adaptation. Additionally, integrated the CLIP language model to capture rich semantic context, enhancing the model’s ability to maintain content relevance and improve overall performance. By merging vision and language modalities, the system achieves more robust feature understanding, resulting in superior stylization and contextual coherence.
-                </p>
-                <p class="project-description">
-                    <b>Technologies:</b> TensorFlow, PyTorch, OpenCV, PIL, Colorthief
-                </p>
-                
-            </div>
-            <!-- First Project Slider -->
-            <div class="slider-container" id="project1-slider">
-                <div class="slide active">
-                    <img src="img/Sample 1.png" alt="Color Transfer Project Image 1">
-                    <!-- <div class="caption">Color Style Transfer - Original Image</div> -->
-                </div>
-                <div class="slide">
-                    <img src="img/Sample 2.png" alt="Color Transfer Project Image 2">
-                    <!-- <div class="caption">Color Style Transfer - Style Reference</div> -->
-                </div>
-                <button class="slider-btn prev-btn">❮</button>
-                <button class="slider-btn next-btn">❯</button>
-                <div class="slider-nav">
-                    <div class="nav-dot active"></div>
-                    <div class="nav-dot"></div>
-                    <div class="nav-dot"></div>
-                </div>
+                <ul>
+                    <li>Developed a system to transfer color styles between images while preserving content.</li>
+                    <li>Integrated user preference input for personalized results.</li>
+                    <li>Implemented using TensorFlow, PyTorch, OpenCV, PIL, and Colorthief.</li>
+                    <li>Responsible for model design, implementation, and evaluation.</li>
+                </ul>
             </div>
 
             <div class="project-item">
@@ -145,126 +140,83 @@
                     <span class="project-name">E-Commerce System</span>
                     <span class="date">Diploma Final Year Project</span>
                 </div>
-                <p class="project-description">
-                    <b>Objective:</b> Created a comprehensive online shopping platform with both user and admin functionalities, including database management and user-friendly interfaces.
-                </p>
-                <p class="project-description">
-                    <b>Technologies:</b> HTML, CSS, JavaScript, PHP, MySQL
-                </p>
+                <ul>
+                    <li>Developed a full-featured e-commerce platform with admin and user functionality.</li>
+                    <li>Managed MySQL database for products, users, and transactions.</li>
+                    <li>Implemented using HTML, CSS, JavaScript, PHP, MySQL.</li>
+                </ul>
             </div>
-            <!-- Second Project Slider -->
-            <div class="slider-container" id="project2-slider">
-                <div class="slide active">
-                    <img src="img/user-dashboard.jpg" alt="E-Commerce Project Image 1">
-                    <!-- <div class="caption">E-Commerce System - Homepage</div> -->
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-name">Website Deployment (Cloud Project)</span>
                 </div>
-                <div class="slide">
-                    <img src="img/user-profile.png" alt="E-Commerce Project Image 2">
-                    <!-- <div class="caption">E-Commerce System - Product Listing</div> -->
+                <ul>
+                    <li>Deployed a static website using Amazon S3 and EC2.</li>
+                    <li>Configured access control, security settings, and permissions.</li>
+                    <li>Installed web server on EC2 and deployed the website.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-name">To-Do List Application</span>
                 </div>
-                <div class="slide">
-                    <img src="img/cart.png" alt="E-Commerce Project Image 3">
-                    <!-- <div class="caption">E-Commerce System - Admin Dashboard</div> -->
-                </div>
-                <div class="slide">
-                    <img src="img/payment.png" alt="E-Commerce Project Image 4">
-                    <!-- <div class="caption">E-Commerce System - Admin Dashboard</div> -->
-                </div>
-                <button class="slider-btn prev-btn">❮</button>
-                <button class="slider-btn next-btn">❯</button>
-                <div class="slider-nav">
-                    <div class="nav-dot active"></div>
-                    <div class="nav-dot"></div>
-                    <div class="nav-dot"></div>
-                </div>
+                <ul>
+                    <li>Developed a full-stack web app allowing CRUD operations on tasks.</li>
+                    <li>Frontend built with React, backend with Node.js and Express, database using PostgreSQL.</li>
+                    <li>Containerized and deployed via Docker and Kubernetes (k3s + Colima).</li>
+                    <li>Implemented CI/CD using GitLab pipelines.</li>
+                </ul>
             </div>
         </section>
 
         <section id="skills">
             <h2 class="section-title">Technical Skills</h2>
+
             <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-python skill-icon"></i>
-                    <div class="skill-name">Python</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js skill-icon"></i>
-                    <div class="skill-name">JavaScript</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-java skill-icon"></i>
-                    <div class="skill-name">Java</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-copyright skill-icon"></i>
-                    <div class="skill-name">C</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database skill-icon"></i>
-                    <div class="skill-name">SQL</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-r-project skill-icon"></i>
-                    <div class="skill-name">R</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-html5 skill-icon"></i>
-                    <div class="skill-name">HTML</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <div class="skill-name">CSS</div>
-                </div>
+                <div class="skill-item"><i class="fab fa-python skill-icon"></i><div class="skill-name">Python</div></div>
+                <div class="skill-item"><i class="fab fa-r-project skill-icon"></i><div class="skill-name">R</div></div>
+                <div class="skill-item"><i class="fab fa-java skill-icon"></i><div class="skill-name">Java</div></div>
+                <div class="skill-item"><i class="fab fa-js skill-icon"></i><div class="skill-name">JavaScript</div></div>
+                <div class="skill-item"><i class="fab fa-php skill-icon"></i><div class="skill-name">PHP</div></div>
+                <div class="skill-item"><i class="fas fa-code skill-icon"></i><div class="skill-name">C++</div></div>
             </div>
 
-            <h2 class="section-title" style="margin-top: 40px;">Framework</h2>
+            <h2 class="section-title" style="margin-top: 40px;">DevOps & Cloud Tools</h2>
             <div class="skills-grid">
-                <div class="skill-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" 
-                        alt="TensorFlow Logo" class="skill-icon" width="50" height="50">
-                    <div class="skill-name">TensorFlow</div> 
-                </div>
-                <div class="skill-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" 
-                        alt="Pytorch Logo" class="skill-icon" width="50" height="50">
-                    <div class="skill-name">Pytorch</div> 
-                </div>
-                <div class="skill-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" 
-                        alt="OpenCV Logo" class="skill-icon" width="50" height="50">
-                    <div class="skill-name">OpenCV</div> 
-                </div>
-                <div class="skill-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" 
-                        alt="Numpy Logo" class="skill-icon" width="50" height="50">
-                    <div class="skill-name">Numpy</div> 
-                </div>
-                <div class="skill-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg" 
-                        alt="Pandas Logo" class="skill-icon" width="50" height="50">
-                    <div class="skill-name">Pandas</div> 
-                </div>
+                <div class="skill-item"><i class="fa-brands fa-docker skill-icon"></i><div class="skill-name">Docker</div></div>
+                <div class="skill-item"><i class="fa-brands fa-aws skill-icon"></i><div class="skill-name">AWS</div></div>
+                <div class="skill-item"><i class="fa-solid fa-network-wired skill-icon"></i><div class="skill-name">Kubernetes</div></div>
+                <div class="skill-item"><i class="fa-brands fa-gitlab skill-icon"></i><div class="skill-name">GitLab</div></div>
+                <div class="skill-item"><i class="fa-solid fa-chart-line skill-icon"></i><div class="skill-name">Prometheus</div></div>
+                <div class="skill-item"><i class="fa-solid fa-chart-pie skill-icon"></i><div class="skill-name">Grafana</div></div>
             </div>
-    
+
+            <h2 class="section-title" style="margin-top: 40px;">Data Science Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" width="50"><div class="skill-name">TensorFlow</div></div>
+                <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" width="50"><div class="skill-name">PyTorch</div></div>
+                <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" width="50"><div class="skill-name">OpenCV</div></div>
+                <div class="skill-item"><i class="fas fa-database skill-icon"></i><div class="skill-name">SQL</div></div>
+            </div>
+
             <h2 class="section-title" style="margin-top: 40px;">Soft Skills</h2>
             <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-file-word skill-icon"></i>
-                    <div class="skill-name">Office 365</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-users skill-icon"></i>
-                    <div class="skill-name">Teamwork</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-lightbulb skill-icon"></i>
-                    <div class="skill-name">Problem Solving</div>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-user-group"></i>
-                    <div class="skill-name">Social</div>
-                </div>
+                <div class="skill-item"><i class="fas fa-lightbulb skill-icon"></i><div class="skill-name">Problem Solving</div></div>
+                <div class="skill-item"><i class="fas fa-users skill-icon"></i><div class="skill-name">Teamwork</div></div>
+                <div class="skill-item"><i class="fas fa-comments skill-icon"></i><div class="skill-name">Communication</div></div>
+                <div class="skill-item"><i class="fas fa-file-word skill-icon"></i><div class="skill-name">Microsoft Office</div></div>
             </div>
+        </section>
+
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <ul>
+                <li>AWS Knowledge: Cloud Essentials</li>
+                <li>AWS Technical Essentials</li>
+                <li>Fundamentals of Analytics on AWS</li>
+            </ul>
         </section>
     </main>
     
