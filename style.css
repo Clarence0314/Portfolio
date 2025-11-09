@@ -45,6 +45,7 @@ header {
     display: flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
 }
 
 .section-title {
@@ -74,6 +75,9 @@ header {
     color: #666;
 }
 
+/* ==========================
+   ✅ Skills Section 改进版
+   ========================== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -84,30 +88,43 @@ header {
 .skill-item {
     background-color: #f8f9fa;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.skill-icon {
-    font-size: 2em;
-    margin-bottom: 10px;
+.skill-icon, .skill-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
     color: #2c3e50;
 }
 
 .skill-name {
     font-size: 0.9em;
     color: #2c3e50;
+    line-height: 1.2em;
+    max-width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
+/* ==========================
+   通用样式
+   ========================== */
 .project-description {
     margin-top: 10px;
 }
@@ -290,7 +307,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Media Queries */
+/* ==========================
+   ✅ Media Queries 优化
+   ========================== */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -306,11 +325,6 @@ html {
         text-align: center;
     }
 
-    .background-section {
-        font-size: 1.5rem;
-        padding: 15px 10px;
-    }
-
     .profile-name {
         font-size: 2em;
     }
@@ -319,8 +333,23 @@ html {
         gap: 10px;
     }
 
+    /* ✅ Skill Grid 更平衡布局 */
     .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-item {
+        padding: 15px;
+    }
+
+    .skill-icon, .skill-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skill-name {
+        font-size: 0.85em;
     }
 
     .slider-container {
@@ -342,11 +371,6 @@ html {
 }
 
 @media (max-width: 480px) {
-    .background-section {
-        font-size: 1.2rem;
-        min-height: 100px;
-    }
-
     .profile-name {
         font-size: 1.8em;
     }
@@ -376,16 +400,24 @@ html {
         align-items: center;
     }
 
+    /* ✅ Mobile Skill Grid 完美布局 */
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 12px;
     }
 
     .skill-item {
-        padding: 15px;
+        padding: 10px;
+        border-radius: 10px;
     }
 
-    .skill-icon {
-        font-size: 1.5em;
+    .skill-icon, .skill-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .skill-name {
+        font-size: 0.8em;
+        line-height: 1.1em;
     }
 }
