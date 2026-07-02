@@ -72,4 +72,40 @@ class ImageSlider {
 document.addEventListener('DOMContentLoaded', function() {
     new ImageSlider('project1-slider');
     new ImageSlider('project2-slider');
+    new ImageSlider('project3-slider');
+});
+
+// Lightbox: click any slider image to enlarge it
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <button class="lightbox__close" aria-label="Close">&times;</button>
+        <img alt="Enlarged preview">
+    `;
+    document.body.appendChild(lightbox);
+    const lightboxImg = lightbox.querySelector('img');
+
+    const open = (src, alt) => {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || 'Enlarged preview';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('.slide img').forEach(img => {
+        img.addEventListener('click', () => open(img.src, img.alt));
+    });
+
+    // Close on backdrop click, close button, or Escape
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) close();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+    });
 });
