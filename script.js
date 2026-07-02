@@ -3,10 +3,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Stagger the reveal of items inside the section
+                const items = entry.target.querySelectorAll(
+                    ".experience-item, .education-item, .project-item, .skill-item"
+                );
+                items.forEach((el, i) => {
+                    el.style.transitionDelay = `${Math.min(i, 12) * 0.06}s`;
+                });
                 entry.target.classList.add("show");
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     sections.forEach(section => {
         observer.observe(section);
@@ -16,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 class ImageSlider {
     constructor(containerId) {
         this.container = document.getElementById(containerId);
+        if (!this.container) return; // no slider markup on the page — skip
         this.slides = this.container.querySelectorAll('.slide');
         this.dots = this.container.querySelectorAll('.nav-dot');
         this.currentSlide = 0;

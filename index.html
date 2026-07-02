@@ -11,24 +11,18 @@
     
     <header>
         <h1 class="profile-name">Clarence Tiang Wei Rong</h1>
-        <p class="title">MMU | Bachelor of Computer Science | Majoring in Data Science</p>
-        <p>I am a data science graduate passionate about cloud computing and DevOps automation. I have hands-on experience with container orchestration, CI/CD pipelines, and AI models, and continuously pursue growth through self-learning and professional certifications.</p>
-        <br>
-        <p>My career goal is to become a skilled engineer specializing in cloud infrastructure and data-driven solutions. I actively explore cloud technologies, container management, and AI systems to strengthen both practical and theoretical understanding.</p>
+        <p class="title">Cloud Infrastructure &amp; DevOps Automation</p>
+        <p class="intro">
+            SRE focused on building reliable cloud platforms and end-to-end automation.
+            I work across Kubernetes, CI/CD, infrastructure as code, and AI-driven internal
+            tooling — turning manual operations into self-service, 24/7 systems.
+        </p>
         <div class="contact-info">
-            <a href="mailto:ctwr0314@gmail.com" class="contact-item" style="text-decoration:none; color: inherit;">
-                📧 ctwr0314@gmail.com
-            </a>
-            <a href="https://wa.me/60168758811" target="_blank" class="contact-item" style="text-decoration:none; color: inherit;">
-                📱 +6016 8758811
-            </a>
-            <span class="contact-item">📍 Petaling Jaya, Selangor, Malaysia</span>
-            <a style="text-decoration:none; color: inherit" href="https://www.linkedin.com/in/clarence0314/" target="_blank" class="social-link">
-                <span>🔗 LinkedIn</span>
-            </a>
-            <a style="text-decoration:none; color: inherit" href="https://github.com/Clarence0314" target="_blank" class="social-link">
-                <span>💻 GitHub</span>
-            </a>
+            <a href="mailto:ctwr0314@gmail.com" class="contact-item">📧 <span>ctwr0314@gmail.com</span></a>
+            <a href="https://wa.me/60168758811" target="_blank" class="contact-item">📱 <span>+6016 8758811</span></a>
+            <span class="contact-item">📍 <span>Petaling Jaya, Selangor</span></span>
+            <a href="https://www.linkedin.com/in/clarence0314/" target="_blank" class="contact-item">🔗 <span>LinkedIn</span></a>
+            <a href="https://github.com/Clarence0314" target="_blank" class="contact-item">💻 <span>GitHub</span></a>
         </div>
     </header>
 
@@ -47,6 +41,22 @@
     <main>
         <section id="experience">
             <h2 class="section-title">Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="company-name">SNSOFT</span>
+                    <span class="date">November 2025 – Present</span>
+                </div>
+                <p class="position">Site Reliability Engineer</p>
+                <ul>
+                    <li>Built an internal developer portal unifying access to ArgoCD, Vault, and environment configs across sites, with Lark OAuth 2.0 and department-based access control.</li>
+                    <li>Deployed an AI assistant via a Lark bot + Claude Code (MCP), letting the team submit tasks through chat for automated, 24/7 handling.</li>
+                    <li>Created and maintained CI/CD pipelines (Jenkins, GitHub Actions with self-hosted runners) to streamline deployments and updates.</li>
+                    <li>Drove end-to-end automation through webhook-triggered workflows.</li>
+                    <li>Managed AWS and Alibaba Cloud infrastructure with Terraform and Kubernetes.</li>
+                    <li>Managed Cloudflare/CloudFront CDN and security policies, and Prometheus/Grafana observability.</li>
+                </ul>
+            </div>
 
             <div class="experience-item">
                 <div class="experience-header">
@@ -190,11 +200,19 @@
             <h2 class="section-title" style="margin-top: 40px;">DevOps & Cloud Tools</h2>
             <div class="skills-grid">
                 <div class="skill-item"><i class="fa-brands fa-docker skill-icon"></i><div class="skill-name">Docker</div></div>
-                <div class="skill-item"><i class="fa-brands fa-aws skill-icon"></i><div class="skill-name">AWS</div></div>
                 <div class="skill-item"><i class="fa-solid fa-network-wired skill-icon"></i><div class="skill-name">Kubernetes</div></div>
-                <div class="skill-item"><i class="fa-brands fa-gitlab skill-icon"></i><div class="skill-name">GitLab</div></div>
+                <div class="skill-item"><i class="fa-brands fa-aws skill-icon"></i><div class="skill-name">AWS</div></div>
+                <div class="skill-item"><i class="fa-solid fa-cloud skill-icon"></i><div class="skill-name">Alibaba Cloud</div></div>
+                <div class="skill-item"><i class="fa-solid fa-cube skill-icon"></i><div class="skill-name">Terraform</div></div>
+                <div class="skill-item"><i class="fa-solid fa-code-branch skill-icon"></i><div class="skill-name">ArgoCD</div></div>
+                <div class="skill-item"><i class="fa-solid fa-vault skill-icon"></i><div class="skill-name">Vault</div></div>
+                <div class="skill-item"><i class="fa-brands fa-jenkins skill-icon"></i><div class="skill-name">Jenkins</div></div>
+                <div class="skill-item"><i class="fa-brands fa-github skill-icon"></i><div class="skill-name">GitHub Actions</div></div>
+                <div class="skill-item"><i class="fa-brands fa-gitlab skill-icon"></i><div class="skill-name">GitLab CI</div></div>
+                <div class="skill-item"><i class="fa-brands fa-cloudflare skill-icon"></i><div class="skill-name">Cloudflare</div></div>
                 <div class="skill-item"><i class="fa-solid fa-chart-line skill-icon"></i><div class="skill-name">Prometheus</div></div>
                 <div class="skill-item"><i class="fa-solid fa-chart-pie skill-icon"></i><div class="skill-name">Grafana</div></div>
+                <div class="skill-item"><i class="fa-solid fa-robot skill-icon"></i><div class="skill-name">Claude / MCP</div></div>
             </div>
 
             <h2 class="section-title" style="margin-top: 40px;">Data Science Tools</h2>

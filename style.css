@@ -15,36 +15,67 @@ body {
 
 header {
     text-align: center;
-    padding: 25px 20px;
-    background-color: #f8f9fa;
+    padding: 55px 24px 45px;
+    background: linear-gradient(160deg, #f8f9fa 0%, #eef2f7 100%);
     margin-bottom: 40px;
-    border-radius: 8px;
+    border-radius: 16px;
+    border: 1px solid #e5e9f0;
 }
 
 .profile-name {
-    font-size: 2.5em;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: -1px;
     color: #2c3e50;
-    margin-bottom: 10px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    animation: fadeUp 0.6s ease 0.08s both;
 }
 
 .title {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #3498db;
     margin-bottom: 20px;
+    animation: fadeUp 0.6s ease 0.16s both;
+}
+
+.intro {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    color: #55606e;
+    font-size: 1.05em;
+    animation: fadeUp 0.6s ease 0.24s both;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
     flex-wrap: wrap;
     margin-top: 10px;
+    animation: fadeUp 0.6s ease 0.32s both;
 }
 
 .contact-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 0.92em;
+    background-color: #ffffff;
+    border: 1px solid #e0e5ee;
+    padding: 8px 15px;
+    border-radius: 999px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(52, 152, 219, 0.18);
+    border-color: #3498db;
+    color: #3498db;
     text-decoration: none;
 }
 
@@ -73,6 +104,49 @@ header {
 
 .date {
     color: #666;
+}
+
+.position {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   ✅ Entrance animations
+   ========================== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.experience-item, .education-item, .project-item {
+    background-color: #fff;
+    border: 1px solid #eaedf3;
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 8px rgba(20, 30, 60, 0.04);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover, .education-item:hover, .project-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(20, 30, 60, 0.1);
+}
+
+section.show .experience-item,
+section.show .education-item,
+section.show .project-item,
+section.show .skill-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-item {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 /* ==========================
@@ -158,6 +232,8 @@ ul {
 }
 
 .nav-link {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     color: #2c3e50;
     font-weight: 500;
@@ -310,30 +386,65 @@ html {
 /* ==========================
    ✅ Media Queries 优化
    ========================== */
+
+/* Tablet & small laptops */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 12px;
+    }
+
+    header {
+        padding: 40px 20px 32px;
+        margin-bottom: 30px;
+    }
+
+    .profile-name {
+        font-size: 2.1em;
+    }
+
+    .title {
+        font-size: 1.1em;
+    }
+
+    .intro {
+        font-size: 1em;
+    }
+
+    /* Nav wraps and stays centered */
+    .nav-container {
+        padding: 10px 0;
+        margin-bottom: 24px;
     }
 
     .nav-menu {
         flex-wrap: wrap;
-        gap: 15px;
-    }
-    
-    .nav-item {
-        flex: 0 0 calc(50% - 15px);
-        text-align: center;
+        gap: 6px 14px;
     }
 
-    .profile-name {
-        font-size: 2em;
+    .nav-link {
+        padding: 6px 8px;
+        font-size: 0.95em;
     }
 
     .contact-info {
         gap: 10px;
     }
 
-    /* ✅ Skill Grid 更平衡布局 */
+    .experience-item, .education-item, .project-item {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    /* Stack company name above date */
+    .experience-header, .project-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .date {
+        font-size: 0.9em;
+    }
+
     .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 15px;
@@ -351,32 +462,30 @@ html {
     .skill-name {
         font-size: 0.85em;
     }
-
-    .slider-container {
-        height: 300px;
-    }
-
-    .slider-btn {
-        padding: 12px;
-    }
-
-    .experience-header, .project-header {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .date {
-        font-size: 0.9em;
-    }
 }
 
+/* Phones */
 @media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 32px 16px 26px;
+        border-radius: 12px;
+    }
+
     .profile-name {
-        font-size: 1.8em;
+        font-size: 1.75em;
+        letter-spacing: -0.5px;
     }
 
     .title {
         font-size: 1em;
+    }
+
+    .intro {
+        font-size: 0.95em;
     }
 
     .section-title {
@@ -384,40 +493,45 @@ html {
     }
 
     .nav-menu {
+        gap: 4px 8px;
+    }
+
+    .nav-link {
+        padding: 5px 7px;
+        font-size: 0.88em;
+    }
+
+    /* Contact pills stay as wrapping rows, just tighter */
+    .contact-info {
+        gap: 8px;
+    }
+
+    .contact-item {
+        font-size: 0.85em;
+        padding: 7px 12px;
+    }
+
+    .experience-item, .education-item, .project-item {
+        padding: 16px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
         gap: 10px;
     }
 
-    .nav-item {
-        flex: 0 0 100%;
-    }
-
-    .slider-container {
-        height: 250px;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* ✅ Mobile Skill Grid 完美布局 */
-    .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-        gap: 12px;
-    }
-
     .skill-item {
-        padding: 10px;
+        padding: 12px 8px;
         border-radius: 10px;
     }
 
     .skill-icon, .skill-item img {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 
     .skill-name {
-        font-size: 0.8em;
-        line-height: 1.1em;
+        font-size: 0.78em;
+        line-height: 1.15em;
     }
 }
